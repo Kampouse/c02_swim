@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcpy.c                                           :+:      :+:    :+:   */
+/*   ft_is_lowercase.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 09:08:40 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/16 10:54:38 by jean-phil        ###   ########.fr       */
+/*   Created: 2021/03/16 16:53:51 by jean-phil         #+#    #+#             */
+/*   Updated: 2021/03/16 18:16:11 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strcpy(char *dest, char *origin)
-{	
-	while (*origin != '\0')
+int	ft_str_is_lowercase (char *str)
+{
+	int		output;
+
+	while (*str != '\0')
 	{
-		dest = origin;
-		origin++;
-		dest++;
+		output = 1
+		if (*str >= 97 && *str <= 122 )
+			output = 0;
+		str++;
 	}
-	return (*dest);
+	return (output);
 }

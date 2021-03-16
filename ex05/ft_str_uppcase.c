@@ -1,45 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_str_uppcase.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 15:32:13 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/16 18:11:14 by jean-phil        ###   ########.fr       */
+/*   Created: 2021/03/16 17:35:50 by jean-phil         #+#    #+#             */
+/*   Updated: 2021/03/16 18:16:09 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	str_lengeh ( char *str)
+#include "stdio.h"
+int	ft_str_is_uppercase(char *str)
 {
-	char	*ray;
-	int		lenght;
+	int		output;	
 
-	ray = str;
-	lenght = 0;
-	 	while (*ray != 0)
-	{
-		ray++;
-		lenght++;
-	}
-	return (lenght);
-}
-
-int	ft_str_is_numeric (char *str)
-{
-	int		iterator;
-	int		value;	
-	int		output;
-
-	value = 0;
-	iterator = 0;
-	value = str_lengeh(str);
-	while (iterator != value)
+	output = 1;
+	while (*str != '\0' )
 	{
 		output = 1;
-		iterator++;
-		if (*str < 58 && *str > 47)
+		if (*str > 64 && *str < 91)
 			output = 0;
+		str++;
 	}
 	return (output);
 }
