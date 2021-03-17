@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strupercase.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 19:13:30 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/17 15:37:10 by jean-phil        ###   ########.fr       */
+/*   Created: 2021/03/17 07:34:20 by jean-phil         #+#    #+#             */
+/*   Updated: 2021/03/17 18:18:17 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_printable(char *input)
+char	*ft_strupcase(char *str)
 {
-	int		value;
+	char	*strong;
 
-	value = 1;
-	while (*input != '\0')
+	strong = str;
+	while (*strong != '\0')
 	{
-		value = 1;
-		if (*input >= 32 && *input <= 127)
-			 	input = 0;
-	}	
-	return (value);
+		if (*strong >= 'a' && *strong <= 'z')
+			*strong = *strong - 32;
+		strong++;
+	}
+	return (str);
 }

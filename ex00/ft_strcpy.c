@@ -6,17 +6,20 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 09:08:40 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/16 16:28:29 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/17 16:31:09 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	ft_strcpy(char *dest, char *origin)
+char	*ft_strcpy(char *dest, char *origin)
 {	
-	while (*origin != '\0')
+	int		i;
+
+	i = 0;
+	while (origin[i] != '\0')
 	{
-		dest = origin;
-		origin++;
-		dest++;
+		dest[i] = origin[i];
+		++i;
 	}
-	return (*dest);
+	dest[i] = '\0';
+	return (dest);
 }

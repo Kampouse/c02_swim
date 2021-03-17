@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/16 19:13:30 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/17 15:37:10 by jean-phil        ###   ########.fr       */
+/*   Created: 2021/03/17 18:26:16 by jean-phil         #+#    #+#             */
+/*   Updated: 2021/03/17 18:54:20 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_printable(char *input)
-{
-	int		value;
+ #include "unistd.h" 
 
-	value = 1;
-	while (*input != '\0')
+
+
+char ft_strcapitalize(char *str)
+{
+	int iterator
+	char *modifiable;
+		modifiable = str;
+
+	
+while(*modifiable)
+{
+	if(*modifiable >= 'a' && *modifiable <= 'z')
 	{
-		value = 1;
-		if (*input >= 32 && *input <= 127)
-			 	input = 0;
-	}	
-	return (value);
+		 *modifiable= *modifiable + 32;
+	}
+	
+	modifiable++;
 }
+}
+ int main(void){
+
+
+ft_strcapitalize()
+
+ }
