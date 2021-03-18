@@ -6,10 +6,9 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 16:53:51 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/16 19:24:28 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/18 11:07:44 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_str_is_lowercase (char *str)
 {
 	int		output;
@@ -18,7 +17,9 @@ int	ft_str_is_lowercase (char *str)
 	{
 		output = 1;
 		if (*str >= 97 && *str <= 122)
-			output = 0;
+			output = 1;
+		else
+			return (0);
 		str++;
 	}
 	return (output);

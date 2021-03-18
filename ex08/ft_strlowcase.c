@@ -6,22 +6,20 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/17 16:45:57 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/17 16:51:41 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/18 12:53:49 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+char	*ft_strlowcase(char *str)
 {
-	int		i;
+	char	*strong;
 
-	i = 0;
-	while (str[i])
+	strong = str;
+	while (*strong != '\0')
 	{
-		if (str[i] >= 'a' && str[i] <= 'a')
-		{
-			str[i] = str[i] + 32;
-		}
-		i++;
+		if (*strong >= 'A' && *strong <= 'Z')
+			*strong = *strong + 32;
+		strong++;
 	}
 	return (str);
 }
