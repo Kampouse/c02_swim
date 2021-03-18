@@ -9,7 +9,7 @@
 /*   Updated: 2021/03/18 11:07:59 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "stdio.h"
+
 int	ft_str_is_numeric (char *str)
 {
 	int		output;
