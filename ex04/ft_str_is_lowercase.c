@@ -6,22 +6,20 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 16:53:51 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/18 11:07:44 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/21 14:52:12 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_lowercase (char *str)
 {
-	int		output;
+	char	*interator;
 
-	while (*str != '\0')
+	interator = str;
+	while (*interator != '\0')
 	{
-		output = 1;
-		if (*str >= 97 && *str <= 122)
-			output = 1;
-		else
+		if (*interator < 'a' || *interator > 'z')
 			return (0);
-		str++;
+		interator++;
 	}
-	return (output);
+	return (1);
 }

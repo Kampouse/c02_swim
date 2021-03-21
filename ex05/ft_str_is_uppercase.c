@@ -6,23 +6,20 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 17:35:50 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/18 11:33:42 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/21 14:53:05 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_uppercase(char *str)
 {
-	int		output;	
+	char	*iterator;
 
-	output = 0;
-	while (*str != '\0' )
+	iterator = str;
+	while (*iterator != '\0' )
 	{
-		output = 1;
-		if (*str > 64 && *str < 91)
-			output = 1;
-		else
+		if (*iterator < 'A' || *str > 'Z')
 			return (0);
-		str++;
+		iterator++;
 	}
-	return (output);
+	return (1);
 }

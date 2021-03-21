@@ -6,26 +6,20 @@
 /*   By: jean-phil <jemartel@student.42quebec>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/16 15:32:13 by jean-phil         #+#    #+#             */
-/*   Updated: 2021/03/18 11:07:59 by jean-phil        ###   ########.fr       */
+/*   Updated: 2021/03/21 15:05:07 by jean-phil        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_numeric (char *str)
 {
-	int		output;
+	char	*iterator;
 
-	output = 0;
-	while (*str)
+	iterator = str;
+	while (*iterator)
 	{
-		if (*str >= '0' && *str <= '9')
-		{
-			output = 1;
-		}
-		else
-		{
+		if (*iterator < '0' || *iterator > '9')
 			return (0);
-		}			
-		str++;
+		iterator++;
 	}
-	return (output);
+	return (1);
 }
